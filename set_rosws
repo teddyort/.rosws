@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Usage: set_rosws [ws_name]"
+    exit 0
+fi
+
+cur_dir=$(dirname $(realpath $0))
+cd $cur_dir
+
+if [ -f workspaces/$1 ]; then
+    echo "Switching ROS ws to $1. Open a new terminal to use."
+    cp workspaces/$1 default.sh
+else
+    echo "Cannot find $1 in $cur_dir/workspaces"
+fi
