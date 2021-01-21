@@ -1,3 +1,7 @@
 # Example workspace setup script
+# Here you can setup all of the environment needed for a particular workspace
+# Typical use includes something like the following:
+# source ~/catkin_ws/devel/setup.bash
+
 echo "This is an example rosws environment setup script"
 echo "Add your own to ~/.rosws/workspaces"
